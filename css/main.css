@@ -156,10 +156,10 @@ section > p{
   line-height: 30px;
 }
 .l_title{left: 50px;top: 180px;}
-.r_title{right: 50px;bottom: 200px;text-align: right;}
+.r_title{right: 50px;bottom: 250px;text-align: right;}
 
 #intro > a{
-  bottom: 40px;
+  bottom: 220px;
   left: 50%;
   transform: translateX(-50%);
 }
