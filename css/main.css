@@ -159,7 +159,7 @@ section > p{
 .r_title{right: 50px;bottom: 250px;text-align: right;}
 
 #intro > a{
-  bottom: 220px;
+  bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
 }
