@@ -219,11 +219,13 @@ footer address {
 .modal > div > label{
   color: #fff;
   font-size: 16px;
+  line-height: 30px;
 }
 #c_btn{
   float: right;
   color: #fff;
   font-size: 16px;
+  line-height: 30px;
 }
 
 /*# sourceMappingURL=base.css.map */
