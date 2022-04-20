@@ -4,6 +4,8 @@ $f_color01:#333; //메인 글자색 변수선언
 $f_size01:12px; //일반 본문 글자크기 
 $f_size02:16px; //내비게이션 글자 크기
 $f_color02:#fff;
+$t_align:center; 
+
 
 $width:1200px;
 $margin:0px auto;
@@ -20,7 +22,7 @@ body {
     background: #fff;
     font-family: 'Noto Sans KR', '맑은 고딕', sans-serif;
     font-size: 12px;
-    color: #333;
+    color: $f_color01;
 }
 
 a {
@@ -148,7 +150,7 @@ nav {
     border-radius: 50%;
     background-color: rgba(125, 160, 255, 0.6);
     color: #fff;
-    text-align: center;
+    text-align: $t_align;
     font-weight: bold;
 }
 
@@ -160,7 +162,7 @@ nav {
     color: #fff;
     display: inline-block;
     width: 160px;
-    text-align: center;
+    text-align: $t_align;
     position: absolute;
     top: 0px;
 }
@@ -202,4 +204,27 @@ footer address{
     text-transform: uppercase;
     padding-top:20px;
     line-height:30px;
+}
+/* 모달 서식 */
+.modal{
+    width: 100%;height: 100%;
+    position: fixed;top: 0px;left: 0px;
+    background: rgba(0,0,0,.8);
+    z-index: 1000;
+}
+.modal > div{
+    width: 450px;height: 650px;
+    margin: auto;
+    transform: translateY(10%);
+}
+.modal > div > label{
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
+}
+#c_btn{
+    float: right;
+    color: #fff;
+    font-size: 16px;
+    line-height: 30px;
 }
