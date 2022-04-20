@@ -30,6 +30,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
   <script defer src="./script/main.js"></script>
+  <!--제이쿼리 쿠키파일-->
+  <script src="./script/jquery.cookie.js"></script>
   
 </head>
 <body>
@@ -389,6 +391,39 @@
     //   let random = Math.floor(Math.random()*2)+1;
     //   $('#eb').attr('src','./images/banner0'+random+'.jpg');
     // });
+
+    //모달
+    let modal = `
+      <div class="modal">
+        <div>
+          <img src="./images/notice.jpg" alt="">
+          <input type="checkbox" id="ch"><label for="ch">오늘하루 열지 않음</label>
+          <a href="#" title="닫기" id="c_btn">닫기</a>
+        </div>
+      </div>
+    `;
+
+    $('body').append(modal); //바디태그의 안쪽 뒤에 내용을 추가
+
+    //현재 브라우저에 쿠키파일이 존재한다면 모달창이 나오지 않게한다.
+    if($.cookie('popup')=='none'){
+      $('.modal').hide();
+    }
+
+    //2. 체크박스에 체크하고 닫기를 누르면 쿠키가 생성되고 모달창이 닫도록한다.
+    let $ex = $('#ch'); //체크박스 변수
+
+    function closeModal(){
+      if($ex.is('.checked')){
+        $.cookie('popup','none',{expires:1,path:'/'}); //쿠키파일을 생성
+      }
+      $('.modal').hide(); //모달 숨기기
+    }
+
+    //그냥 닫기 버튼을 누른경우 closeModal함수를 호출하여 쿠키생성유무를 따진다.
+    $('#c_btn').click(function(){
+      closeModal();
+    });
   </script>
 </body>
 </html>
