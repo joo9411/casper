@@ -112,7 +112,7 @@ section > p{
   line-height: 50px;
   border: 1px solid #333;
   padding: 6px 40px;
-  transition: 0.5;
+  transition: 0.5s;
 }
 .detail > .price2:hover{
   background:rgb(27, 70, 187);
@@ -347,7 +347,7 @@ font-weight: bold;
 }
 #cs dl > dt{font-weight: bold;}
 #cs dl > dd{
-  color: rgba(109,109,109);
+  color: rgb(109,109,109);
   line-height: 22px;
 }
 #cs ul{
