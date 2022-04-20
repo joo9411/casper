@@ -1,5 +1,16 @@
 @charset "utf-8";
 
+$fsize: 14px;
+$border: 1px solid #333;
+$padding: 10px 30px;
+$transition: 0.5s;
+
+@mixin btn01{
+    font-size: $fsize;
+    border: $border;
+    padding: $padding;
+    transition: $transition;
+}
 /* 캐스퍼 인트로 영상 */
 #mintro article{
   position:absolute;
@@ -165,10 +176,7 @@ section > p{
 }
 /* 더보기 버튼 서식 */
 .more{
-  font-size: 14px;
-  border: 1px solid #333;
-  padding: 10px 30px;
-  transition: 0.5s;
+    @include btn01;
 }
 .more:hover{
   background: #333;
